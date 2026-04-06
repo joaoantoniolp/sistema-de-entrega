@@ -1,2 +1,2 @@
 # sistema-de-entrega
-Criar um sistema de controle de entrega
+Atividade Prática Ferramentas de Controle e Configuração de Software
