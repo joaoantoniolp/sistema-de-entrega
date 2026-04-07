@@ -26,6 +26,25 @@ function salvar() {
     }
   };
 
+  const vazio =
+    !mercadoria.nome &&
+    !mercadoria.codigo &&
+    !mercadoria.peso &&
+    !mercadoria.tipo &&
+    !mercadoria.valor &&
+    !mercadoria.endereco.logradouro &&
+    !mercadoria.endereco.complemento &&
+    !mercadoria.endereco.numero &&
+    !mercadoria.endereco.cep &&
+    !mercadoria.endereco.cidade &&
+    !mercadoria.endereco.estado;
+
+  if (vazio) {
+    alert("Preencha pelo menos um campo!");
+    document.getElementById("resultado").textContent = "";
+    return;
+  }
+
   document.getElementById("resultado").textContent =
     JSON.stringify(mercadoria, null, 2);
 }
